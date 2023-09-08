@@ -13,11 +13,11 @@ int main(void)
 	for (ch = 97; ch <= 122; ch++)
 	{
 		putchar(ch);
+	}
 
-		for (cH = 65; cH <= 90; cH++)
-		{
-			putchar(cH);
-		}
+	for (cH = 65; cH <= 90; cH++)
+	{
+		putchar(cH);
 	}
 
 	putchar(10);
