@@ -21,7 +21,7 @@ int main(void)
 			putchar(' ');
 
 			putchar(num_2 / 10 + '0');
-			putchar(num_2 % 10 + '0');
+			putchar(num_2 % 10 + '1');
 
 			if (num_1 != 98 || num_2 != 99)
 			{
