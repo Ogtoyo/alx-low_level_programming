@@ -14,7 +14,7 @@ int main(void)
 	{
 		for (num_2 = num_1 + 1; num_2 < 9; num_2++)
 		{
-			for (num_3 = num_1 + 2; num_3 < 10; num_3++)
+			for (num_3 = num_2 + 1; num_3 < 10; num_3++)
 			{
 
 				putchar(num_1 + '0');
