@@ -14,8 +14,8 @@ int main(void)
 	{
 		putchar(num_1 + '0');
 		putchar(num_2 + '0');
-		putchar(",");
-		putchar(" ");
+		putchar(',');
+		putchar(' ');
 	}
 	putchar(10);
 
