@@ -12,17 +12,16 @@ int main(void)
 
 	for (num_1 = 0; num_1 < 9; num_1++)
 	{
-		putchar(num_1 + '0');
-
 		for (num_2 = 1; num_2 < 10; num_2++)
 		{
-				putchar(num_2 + '0');
+			putchar(num_1 + '0');
+			putchar(num_2 + '0');
 
-				if (num_2 < 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			if (num_2 < 9)
+			{
+				putchar('_');
+				putchar(' ');
+			}
 		}
 
 	}
