@@ -16,6 +16,7 @@ void print_to_98(int n)
 		for (i = n; i <= 98; i++)
 		{
 			int x + i;
+
 			while (x > 0)
 			{
 				_putchar(x % 10 + '0');
