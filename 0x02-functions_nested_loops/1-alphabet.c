@@ -9,13 +9,12 @@
 
 void print_alphabet(void)
 {
-    char alpha;
+	char alpha;
 
-    for (alpha = 'a'; alpha <= 'z'; alpha++)
-    {
-        _putchar(alpha);
-    }
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	{
+		_putchar(alpha);
+	}
 
-    _putchar(10);
-
+	_putchar(10);
 }
