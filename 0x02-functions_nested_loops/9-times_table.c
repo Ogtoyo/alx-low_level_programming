@@ -16,7 +16,7 @@ void times_table(void)
 
 		_putchar(mul9 + '0');
 		_putchar(',');
-		_putcahr('\n');
+		_putchar('\n');
 
 		_putchar('\n');
 
