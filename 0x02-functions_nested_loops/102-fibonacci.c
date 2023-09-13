@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int num1, num2, next, count;
+	long long int num1, num2, next, int count;
 
 	num1 = 1;
 	num2 = 2;
