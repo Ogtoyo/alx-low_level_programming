@@ -29,7 +29,7 @@ int main(void)
 		num2A = num2 / n;
 		num2B = num2 % n;
 
-	for (n = 92; n < 99; n++)
+	for (n = 92; n < 99; ++n)
 	{
 		printf(", %lu", num2A + (num2B / n));
 		printf("%lu", num2B % n);
