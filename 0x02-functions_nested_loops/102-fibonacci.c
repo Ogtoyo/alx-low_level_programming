@@ -9,7 +9,8 @@
 
 int main(void)
 {
-	long long int num1, num2, next, int count;
+	unsigned long int num1, num2, next;
+	int count;
 
 	num1 = 1;
 	num2 = 2;
