@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main -  printing the Fibonacci sequence
  *
@@ -14,14 +13,16 @@ int main(void)
 
 	num1 = 0, num2 = 1, sum = 0;
 
-	for (Nextnum = 0; (Nextnum < 4000000 && Nextnum % 2 == 0); Nextnum++)
+	for (Nextnum = num1 + num2; Nextnum < 4000000; Nextnum = num1 + num2)
 	{
-		Nextnum = num1 + num2;
+		if (Nextnum % 2 == 0)
+		{
+			sum += Nextnum;
+
+		}
 
 		num1 = num2;
 		num2 = Nextnum;
-
-		sum += Nextnum;
 	}
 
 	printf("%ld\n", sum);
