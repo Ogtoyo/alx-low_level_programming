@@ -9,19 +9,19 @@
 
 int main(void)
 {
-	double num1, num2, next;
+	unsigned long long int num1, num2, next;
 	int count;
 
 	num1 = 1;
 	num2 = 2;
 
-	printf("%lf, %lf, ", num1, num2);
+	printf("%llu, %llu, ", num1, num2);
 
 	for (count = 3; count <= 98; count++)
 	{
 		next = num1 + num2;
 
-		printf("%lf", next);
+		printf("%llu", next);
 
 		if (count < 98)
 			printf(", ");
