@@ -32,9 +32,9 @@ int main(void)
 	for (n = 92; n < 99; n++)
 	{
 		printf(", %lu", num2A + (num2B / n));
-		printf("%09lu", num2B % n);
+		printf("%lu", num2B % n);
 
-		num2A = num2A + num1A + (num2B / n);
+		num2A = num2A + num1A;
 		num1A = num2A - num1A;
 		num2B = num2B + num1B;
 		num1B = num2B - num1B;
