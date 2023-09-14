@@ -8,9 +8,19 @@
 
 void print_line(int n)
 {
+	int i;
+
 	if (n <= 0)
 		putchar(10);
 
 	else
-		putchar('_');
+	{
+		for (i = 0; i <= n; i++)
+		{
+			putchar('_');
+		}
+
+		putchar(10);
+	}
+		
 }
