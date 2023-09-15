@@ -8,11 +8,11 @@
 
 void print_number(int n)
 {
-	int d;
+	int d, i;
 
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		n = -n;
 
 	}
@@ -26,7 +26,8 @@ void print_number(int n)
 
 	while (d > 0)
 	{
-		_putchar((n / d) % 10 + '0');
+		i = (n / d) % 10;
+		putchar(i + '0');
 		d /= 10;
 	}
 
