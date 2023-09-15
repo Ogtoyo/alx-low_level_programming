@@ -12,7 +12,7 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n = -n;
 
 	}
@@ -26,7 +26,7 @@ void print_number(int n)
 
 	while (d > 0)
 	{
-		putchar((n / d) % 10 + '0');
+		_putchar((n / d) % 10 + '0');
 		d /= 10;
 	}
 
