@@ -10,23 +10,20 @@ void print_number(int n)
 {
 	unsigned int d;
 
-	d = 1;
-
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		n = -n;
 
-	}
-
-	while (n / d >= 10)
+	} else
 	{
-		d *= 10;
+		d = n;
 	}
 
-	for (; d >= 1; d /= 10)
+	if (d / 10)
 	{
-		_putchar((n / d) % 10 + '0');
+		print_number(d / 10);
 	}
 
+	putchar((d % 10) + '0');
 }
