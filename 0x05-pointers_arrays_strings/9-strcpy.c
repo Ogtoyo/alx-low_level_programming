@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * _strcpy -  a function that copies the string 
+ * _strcpy - a function that copies the string
  * @src: from source
- * @dest: to buffer
+ * @dest: to destination buffer
  */
 
 char *_strcpy(char *dest, char *src)
@@ -18,5 +18,5 @@ char *_strcpy(char *dest, char *src)
 
 	dest[i] = '\0';
 
-	return dest;
+	return (dest);
 }
