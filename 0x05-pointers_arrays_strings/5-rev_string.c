@@ -11,18 +11,20 @@
 void rev_string(char *s)
 {
 	int i, x;
+	char path;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
+		;
 	}
 
-	_putchar(10);
 
 	for (x = i - 1; x >= 0; x--)
 	{
-		_putchar(s[x]);
+		path = s[x];
+		s[x] = s[i];
+		s[i] = path;
+		i++;
 	}
 
-	_putchar(10);
 }
