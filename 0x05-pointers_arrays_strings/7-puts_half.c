@@ -20,9 +20,9 @@ void puts_half(char *str)
 	if (i % 2 == 0)
 		x = (i / 2);
 	else
-		x = ((i - 1) / 2);
+		x = ((i + 1) / 2);
 
-	for (n = x + 1; str[n] != '\0'; n++)
+	for (n = x; str[n] != '\0'; n++)
 	{
 		_putchar(str[n]);
 	}
