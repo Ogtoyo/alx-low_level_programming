@@ -18,13 +18,14 @@ void rev_string(char *s)
 		;
 	}
 
+	i = i - 1;
 
-	for (x = i - 1; x >= 0; x--)
+	for (x = 0; x < i; x++)
 	{
 		path = s[x];
 		s[x] = s[i];
 		s[i] = path;
-		i++;
+		i--;
 	}
 
 }
