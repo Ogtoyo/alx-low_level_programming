@@ -22,13 +22,17 @@ int _atoi(char *s)
 		}
 	}
 
-	while (s[i] >= '0' && s[i] <= '9')
+	for (; s[i] != '\0'; i++)
 	{
+		if (s[i] < '0' || s[i] > '9')
+		{
+			break;
+		}
+
 		result = result * 10 + (s[i] - '0');
-		i++;
 	}
 
-	result *= sign;
+	result = sign * result;
 
 	return (result);
 }
