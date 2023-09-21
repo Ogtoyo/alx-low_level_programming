@@ -19,6 +19,9 @@ void print_number(int n)
 	if (n < 0)
 		_putchar('-');
 
+	if (i == 0)
+        _putchar('0');
+		
 	num = 1;
 	path = i;
 
