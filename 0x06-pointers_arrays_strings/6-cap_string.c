@@ -13,13 +13,12 @@ char *cap_string(char *s)
 {
     int i;
 
-    if (strlen(s) > 0 && islower(s[0]))
-    {
-        s[0] = toupper(s[0]);
-    }
-
     for (i = 1; s[i] != '\0'; i++)
     {
+        for (; !(s[i] >= 'a' && s[i] <= 'z'); i++)
+        {
+            ;
+        }
         if (s[i] == ' ' ||
         s[i - 1] == '\t' ||
         s[i - 1] == '\n' ||
@@ -32,12 +31,10 @@ char *cap_string(char *s)
         s[i - 1] == '(' || 
         s[i - 1] == ')' || 
         s[i - 1] == '{' || 
-        s[i - 1] == '}')
+        s[i - 1] == '}' ||
+        i == 0)
         {
-            if (islower(s[i])) 
-            {
-                s[i] = toupper(s[i]);
-            }
+            s[i] -= 32;
         }
 
     }
