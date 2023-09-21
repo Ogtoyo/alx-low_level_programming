@@ -14,7 +14,7 @@ void reverse_array(int *a, int n)
 	int i, j, path;
 
 	j = n - 1;
-	for (; i > j; i++)
+	for (; i < j; i++)
 	{
 		path = a[i];
 		a[i] = a[j];
