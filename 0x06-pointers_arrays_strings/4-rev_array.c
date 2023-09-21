@@ -12,7 +12,7 @@ void reverse_array(int *a, int n)
 {
 	int i, j, path;
 
-	j = n -1;
+	j = n - 1;
 	for (; j > i; i++)
 	{
 		path = a[i];
