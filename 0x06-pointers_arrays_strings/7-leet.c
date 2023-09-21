@@ -9,20 +9,20 @@
 
 char *leet(char *s)
 {
-    int i, j;
-    char s_1[] = "AaEeOoTtLl";
-    char s_2[] = "4433007711";
+	int i, j;
+	char s_1[] = "AaEeOoTtLl";
+	char s_2[] = "4433007711";
 
-    for (i = 0; s[i]; i++)
-    {
-        for (j = 0; s_1[j]; j++)
-        {
-            if (s[i] == s_1[j])
-            {
-                s[i] = s_2[j];
-            }
-        }
-    }
+	for (i = 0; s[i]; i++)
+	{
+		for (j = 0; s_1[j]; j++)
+		{
+			if (s[i] == s_1[j])
+			{
+				s[i] = s_2[j];
+			}
+		}
+	}
 
-    return (s);
+	return (s);
 }
