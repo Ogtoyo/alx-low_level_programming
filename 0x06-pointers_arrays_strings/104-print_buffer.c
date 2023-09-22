@@ -11,42 +11,42 @@
 
 void print_buffer(char *b, int size)
 {
-	int postion, x, i, remain;
-
-	postion = 0;
+	int postion, i, j, remaining, bytes_to_print;
 
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-
-	while (postion < size)
+	for (postion = 0; postion < size; postion += 10)
 	{
-		x = size - postion < 10 ? size - postion : 10;
+		remaining = size - postion;
+		bytes_to_print = remaining < 10 ? remaining : 10;
 		printf("%08x: ", postion);
-		for (i = 0; i < 10; i++)
+		for (i = 0; i < bytes_to_print; i++)
 		{
-			if (i < x)
-				printf("%02x", *(b + postion + i));
-			else
-				printf(" ");
+			printf("%02x", b[postion + i]);
 			if (i % 2)
+				printf(" ");
+		}
+		for (j = 0; j < 10 - bytes_to_print; j++)
+		{
+			printf("   ");
+			if (j % 2)
 			{
 				printf(" ");
 			}
 		}
-		for (i = 0; i < x; i++)
+		for (i = 0; i < bytes_to_print; i++)
 		{
-			remain = *(b + postion + i);
+			int c = b[postion + i];
 
-			if (remain <= 31 || remain >= 133)
+			if (c < 32 || c > 126)
 			{
-				remain = '.';
+				c = '.';
 			}
-			printf("%c", remain);
+			printf("%c", c);
 		}
 		printf("\n");
-		postion += 10;
 	}
 }
