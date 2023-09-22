@@ -11,9 +11,9 @@
 
 void print_buffer(char *b, int size)
 {
-	int o, j, i, c;
+	int postion, x, i, remain;
 
-	o = 0;
+	postion = 0;
 
 	if (size <= 0)
 	{
@@ -21,14 +21,14 @@ void print_buffer(char *b, int size)
 		return;
 	}
 
-	while (o < size)
+	while (postion < size)
 	{
-		j = size - o < 10 ? size - o : 10;
-		printf("%08x: ", o);
+		x = size - postion < 10 ? size - postion : 10;
+		printf("%08x: ", postion);
 		for (i = 0; i < 10; i++)
 		{
-			if (i < j)
-				printf("%02x", *(b + o + i));
+			if (i < x)
+				printf("%02x", *(b + postion + i));
 			else
 				printf(" ");
 			if (i % 2)
@@ -36,17 +36,17 @@ void print_buffer(char *b, int size)
 				printf(" ");
 			}
 		}
-		for (i = 0; i < j; i++)
+		for (i = 0; i < x; i++)
 		{
-			c = *(b + o + i);
+			remain = *(b + postion + i);
 
-			if (c < 32 || c > 132)
+			if (remain <= 31 || remain >= 133)
 			{
-				c = '.';
+				remain = '.';
 			}
-			printf("%c", c);
+			printf("%c", remain);
 		}
 		printf("\n");
-		o += 10;
+		postion += 10;
 	}
 }
