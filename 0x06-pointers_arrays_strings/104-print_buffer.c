@@ -23,14 +23,11 @@ void print_buffer(char *b, int size)
 		remaining = size - postion;
 		bytes_to_print = remaining < 10 ? remaining : 10;
 		printf("%08x: ", postion);
-
 		for (i = 0; i < bytes_to_print; i++)
 		{
 			printf("%02x", b[postion + i]);
 			if (i % 2)
-			{
 				printf(" ");
-			}
 		}
 		for (j = 0; j < 10 - bytes_to_print; j++)
 		{
