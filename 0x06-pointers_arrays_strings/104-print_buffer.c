@@ -11,43 +11,47 @@
 
 void print_buffer(char *b, int size)
 {
-	int i, j;
+	int position, i;
 
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-
-	for (i = 0; i < size; i += 10)
+	for (position = 0; position < size; position += 10)
 	{
-		printf("%08x: ", i);
-
-		for (j = 0; j < 10; j++)
+		printf("%08x: ", position);
+		for (i = 0; i < 10; i++)
 		{
-			if (i + j < size)
-				printf("%02x", *(b + i + j));
-			else
-				printf("  ");
-
-			if (j % 2)
-				printf(" ");
-		}
-
-		printf(" ");
-
-		for (j = 0; j < 10; j++)
-		{
-			if (i + j < size)
+			if (position + i < size)
 			{
-				char c = *(b + i + j);
-
-				if (c < 32 || c > 126)
-					c = '.';
-				printf("%c", c);
+				printf("%02x", (unsigned char)b[position + i]);
+				if (i % 2)
+				{
+					printf(" ");
+				}
+			}
+			else
+			{
+				printf("   ");
 			}
 		}
-
+		 printf(" ");
+		for (i = 0; i < 10; i++)
+		{
+			if (position + i < size)
+			{
+				if (b[position + i] >= 32 && b[position + i] <= 126)
+				{
+					printf("%c", b[position + i]);
+				}
+				else
+				{
+					printf(".");
+				}
+			}
+		}
 		printf("\n");
 	}
+
 }
