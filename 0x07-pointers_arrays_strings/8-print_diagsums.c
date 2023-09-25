@@ -6,6 +6,7 @@
  *print_diagsums - a function that prints sum of two diagonals of matrix
  *
  * @a: no of rows
+ * @size: size of matrix
  *
  */
 
