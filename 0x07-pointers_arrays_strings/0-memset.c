@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 /**
- * memset - a function that fills memory with a constant byte
+ *_memset - a function that fills memory with a constant byte
  *
  * @s: pointer to the memory area
  * @b: constant byte to fill into the memory
  * @n: the number of byte we want in the memory
+ * Return: pointer to the memory
  *
  */
 
