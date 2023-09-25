@@ -12,6 +12,7 @@
 void print_diagsums(int *a, int size)
 {
 	int sumMajor, sumMinor, i;
+
 	sumMajor = 0;
 	sumMinor = 0;
 
