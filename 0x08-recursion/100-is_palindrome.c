@@ -34,7 +34,7 @@ int if_palindrome(char *s, int x, int y)
 	if (s[x] != s[y])
 		return (0);
 
-	return if_palindrome(s, x + 1, y - 1);
+	return (if_palindrome(s, x + 1, y - 1));
 }
 
 /**
@@ -50,5 +50,5 @@ int is_palindrome(char *s)
 	if (len <= 1)
 		return (1);
 
-	return if_palindrome(s, 0, len - 1);
+	return (if_palindrome(s, 0, len - 1));
 }
