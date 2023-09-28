@@ -8,7 +8,7 @@
  * Return: the prime number
  */
 
-int check_if (int n, int i)
+int check_if(int n, int i)
 {
 	if (i == n)
 		return (1);
@@ -32,5 +32,5 @@ int is_prime_number(int n)
 		return (0);
 
 	else
-		return check_if(n, 2);
+		return (check_if(n, 2));
 }
