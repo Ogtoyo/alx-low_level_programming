@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
- *_sqrt_recursion - returns the natural square root of a number.
- *squ_finder - squres funxtion
- *@n: pointer of string
- *@num: guessed num
- *Return: Always 0
+ * squ_finder - finds the natural square root of a number
+ * @n: the number to find the square root of
+ * @num: the current guess for the square root
+ * Return: the natural square root of n if it exists, otherwise -1
  */
 
 int squ_finder(int n, int num)
@@ -24,6 +23,12 @@ int squ_finder(int n, int num)
 		return (-1);
 	}
 }
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: the number to find the square root of
+ * Return: the natural square root of n if it exists, otherwise -1
+ */
 
 int _sqrt_recursion(int n)
 {
