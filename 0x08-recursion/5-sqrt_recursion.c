@@ -3,7 +3,7 @@
 
 /**
  *_sqrt_recursion - returns the natural square root of a number.
- * squ_finder - guessing the squ
+ *squ_finder - guessing the squ
  *@n: pointer of string
  *@num: guessed num
  *Return: Always 0
