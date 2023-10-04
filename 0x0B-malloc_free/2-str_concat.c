@@ -21,10 +21,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (ptr_str != NULL)
 	{
-		strcpy(ptr_str, s1);
-		strcat(ptr_str, s2);
+		if (s1)
+		 strcpy(ptr_str, s1);
+		if (s2)
+			strcat(ptr_str, s2);
 
 		return (ptr_str);
+		free(ptr_str);
 	}
 
 	return (NULL);
