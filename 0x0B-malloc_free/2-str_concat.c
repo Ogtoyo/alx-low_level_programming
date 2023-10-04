@@ -13,13 +13,9 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr_str;
-	size_t total = strlen(s1) + strlen(s2) + 1;
-
-	if (s1 == NULL)
-		return ("");
-	
-	if (s2 == NULL)
-		return ("");
+	size_t len1 = s1 ? strlen(s1) : 0;
+    size_t len2 = s2 ? strlen(s2) : 0;
+    size_t total = len1 + len2 + 1;
 
 	ptr_str = (char *)malloc(total);
 
@@ -29,7 +25,6 @@ char *str_concat(char *s1, char *s2)
 		strcat(ptr_str, s2);
 
 		return (ptr_str);
-		free(ptr_str);
 	}
 
 	return (NULL);
