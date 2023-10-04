@@ -4,9 +4,9 @@
 #include <string.h>
 
 /**
- * main - a program that prints its name
- * @argc: argument count(size)
- * @argv: argument vector
+ * argstostr - concatenates all the arguments
+ * @ac: argument count(size)
+ * @av: argument vector
  * Return: Always 0
 */
 
