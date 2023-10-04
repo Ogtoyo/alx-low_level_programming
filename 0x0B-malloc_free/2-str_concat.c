@@ -15,7 +15,10 @@ char *str_concat(char *s1, char *s2)
 	char *ptr_str;
 	size_t total = strlen(s1) + strlen(s2) + 1;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
+		return ("");
+	
+	if (s2 == NULL)
 		return ("");
 
 	ptr_str = (char *)malloc(total);
