@@ -14,15 +14,15 @@ char *str_concat(char *s1, char *s2)
 {
 	char *ptr_str;
 	size_t len1 = s1 ? strlen(s1) : 0;
-    size_t len2 = s2 ? strlen(s2) : 0;
-    size_t total = len1 + len2 + 1;
+	size_t len2 = s2 ? strlen(s2) : 0;
+	size_t total = len1 + len2 + 1;
 
 	ptr_str = (char *)malloc(total);
 
 	if (ptr_str != NULL)
 	{
 		if (s1)
-		 strcpy(ptr_str, s1);
+			strcpy(ptr_str, s1);
 		if (s2)
 			strcat(ptr_str, s2);
 
