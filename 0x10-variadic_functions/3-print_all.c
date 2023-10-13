@@ -19,8 +19,8 @@ void print_all(const char * const format, ...)
 	{
 		while (format[i] != '\0')
 		{
-			seperator = ", ";
 			printf("%s", seperator);
+			seperator = ", ";
 			switch (format[i])
 			{
 				case 'c':
