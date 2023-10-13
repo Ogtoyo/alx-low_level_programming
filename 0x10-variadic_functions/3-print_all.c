@@ -10,6 +10,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char *str;
+	char *sep = "";
 
 	va_start(args, format);
 
@@ -39,8 +40,8 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-		if (format[i + 1] != '\0')
-			printf(", ");
+		sep = ", ";
+		printf("%s", sep);
 		i++;
 		}
 	}
