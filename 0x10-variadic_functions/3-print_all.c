@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include "function_pointers.h"
 
 /**
  * print_all - a function that prints anything.
