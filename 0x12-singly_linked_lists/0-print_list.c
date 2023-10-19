@@ -10,27 +10,13 @@
 size_t print_list(const list_t *h)
 {
 	size_t nodes = 0;
-	int i;
+
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("[0] (nil)\n");
+			printf("[%d] %s\n", 0, "(nil)");
 		else
-		{
-			printf("[");
-			for (i = 0; h->str[i]; i++)
-			{
-				if ((h->str[i] > 0 && h->str[i] < 32) || h->str[i] >= 127)
-				{
-					printf("\\x%02X", h->str[i]);
-				}
-				else
-				{
-					putchar(h->str[i]);
-				}
-			}
-			printf("]\n");
-		}
+			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
 		nodes++;
 	}
