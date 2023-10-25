@@ -33,11 +33,11 @@ size_t looped_listint_len(const listint_t *head)
 				nodes++;
 			}
 
-			return nodes;
+			return (nodes);
 		}
 	}
 
-	return 0;
+	return (0);
 }
 
 /**
@@ -62,5 +62,5 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
-	return nodes;
+	return (nodes);
 }
